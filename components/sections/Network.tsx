@@ -200,19 +200,18 @@ export default function Network() {
               opacity="0.55"
             />
 
-            {/* Nicosia HQ — positioned on the right home icon of the stacked
-                pair at Nicosia. Coordinates calculated from the real 1312×816
-                image embedded at SVG x=58.8..541.2, y=20..320. */}
+            {/* Nicosia HQ — right home icon of the pair at Nicosia.
+                Image 1312×816 rendered at SVG x=58.8..541.2, y=20..320. */}
             <g>
               <circle
-                cx="310"
-                cy="158"
+                cx="262"
+                cy="140"
                 r={hover === 0 ? 10 : 7}
                 fill="#ffcc33"
               />
               <circle
-                cx="310"
-                cy="158"
+                cx="262"
+                cy="140"
                 r="16"
                 stroke="#ffcc33"
                 strokeWidth="1.2"
@@ -220,17 +219,17 @@ export default function Network() {
               />
               {/* HQ leader line into the sea */}
               <line
-                x1="320"
-                y1="150"
-                x2="400"
-                y2="95"
+                x1="272"
+                y1="132"
+                x2="380"
+                y2="85"
                 stroke="#ffcc33"
                 strokeWidth="0.8"
                 strokeDasharray="2 3"
               />
               <text
-                x="404"
-                y="92"
+                x="384"
+                y="82"
                 fill="#ffcc33"
                 fontFamily="JetBrains Mono"
                 fontSize="10"
@@ -241,16 +240,16 @@ export default function Network() {
             </g>
 
             {[
-              // Agios Dometios — LEFT home icon of the stacked pair at Nicosia
-              { cx: 285, cy: 158, label: "AG.DOMETIOS", tx: 100, ty: 78, i: 1 },
+              // Agios Dometios — left home icon of the pair at Nicosia
+              { cx: 240, cy: 140, label: "AG.DOMETIOS", tx: 90, ty: 78, i: 1 },
               // Larnaca — home icon on east coast
-              { cx: 374, cy: 168, label: "LARNACA", tx: 450, ty: 122, i: 3 },
+              { cx: 325, cy: 150, label: "LARNACA", tx: 410, ty: 112, i: 3 },
               // Limassol — home icon on south coast
-              { cx: 211, cy: 250, label: "LIMASSOL", tx: 110, ty: 280, i: 2 },
+              { cx: 200, cy: 224, label: "LIMASSOL", tx: 120, ty: 268, i: 2 },
               // Pafos — home icon on SW coast
-              { cx: 115, cy: 241, label: "PAFOS", tx: 32, ty: 225, i: 4 },
-              // Nisou / Pera Horio — home icon SE of Nicosia
-              { cx: 305, cy: 194, label: "PERA HORIO", tx: 380, ty: 218, i: 5 },
+              { cx: 120, cy: 204, label: "PAFOS", tx: 32, ty: 195, i: 4 },
+              // Nisou / Pera Horio — home icon below Nicosia
+              { cx: 245, cy: 178, label: "PERA HORIO", tx: 360, ty: 205, i: 5 },
             ].map((p) => (
               <g key={p.label}>
                 {/* leader line to the label in the sea */}
@@ -295,11 +294,11 @@ export default function Network() {
 
             {/* mesh lines — all branches radiate from Nicosia HQ */}
             <g stroke="rgba(34,240,255,0.25)" strokeDasharray="3 3">
-              <line x1="310" y1="158" x2="285" y2="158" />
-              <line x1="310" y1="158" x2="305" y2="194" />
-              <line x1="310" y1="158" x2="374" y2="168" />
-              <line x1="310" y1="158" x2="211" y2="250" />
-              <line x1="310" y1="158" x2="115" y2="241" />
+              <line x1="262" y1="140" x2="240" y2="140" />
+              <line x1="262" y1="140" x2="245" y2="178" />
+              <line x1="262" y1="140" x2="325" y2="150" />
+              <line x1="262" y1="140" x2="200" y2="224" />
+              <line x1="262" y1="140" x2="120" y2="204" />
             </g>
 
             {/* sea labels — subtle */}

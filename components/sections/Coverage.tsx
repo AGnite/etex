@@ -77,7 +77,7 @@ export default function Coverage() {
       </div>
 
       <div
-        className="flex justify-between items-baseline gap-8"
+        className="flex justify-between items-baseline gap-8 flex-wrap"
         style={{ marginTop: "4rem", marginBottom: "2rem" }}
       >
         <h2

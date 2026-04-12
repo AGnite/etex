@@ -556,6 +556,14 @@ img {
   }
 
   /* ===== COVERAGE ===== */
+  #coverage > div:nth-child(2) {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  #coverage > div:nth-child(2) p {
+    text-align: left !important;
+    max-width: 100% !important;
+  }
   #coverage h2 {
     font-size: clamp(2rem, 9vw, 3rem) !important;
   }
