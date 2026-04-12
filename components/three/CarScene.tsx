@@ -10,7 +10,8 @@ import gsap from "gsap";
 import { PART_CATEGORIES } from "@/lib/parts";
 import { PartComponent } from "./PartComponents";
 
-useGLTF.preload("/models/ferrari.glb");
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+useGLTF.preload(`${BASE}/models/ferrari.glb`);
 
 type MeshInfo = {
   mesh: THREE.Mesh;
@@ -27,7 +28,7 @@ const HIDE_MESHES =
   /^(yellow_trim|blue|chrome|logo|badge|emblem|shield|prancing|horse|steering_centre|centre)$/i;
 
 function Car({ activeId }: { activeId: string }) {
-  const { scene } = useGLTF("/models/ferrari.glb");
+  const { scene } = useGLTF(`${BASE}/models/ferrari.glb`);
   const root = useRef<THREE.Group>(null);
   const meshesRef = useRef<MeshInfo[]>([]);
 

@@ -190,7 +190,7 @@ export default function Network() {
               </filter>
             </defs>
             <image
-              href="/images/stores/cyprus-map.jpg"
+              href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/stores/cyprus-map.jpg`}
               x="0"
               y="20"
               width="600"
