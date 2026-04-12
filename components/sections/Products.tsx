@@ -13,11 +13,19 @@ export default function Products() {
   const [activeId, setActiveId] = useState<string>("idle");
   const [canvasMounted, setCanvasMounted] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const canvasRef = useRef<HTMLDivElement>(null);
   const active = PART_CATEGORIES.find((c) => c.id === activeId);
   const isIdle = !active;
 
   const handleCategoryClick = (id: string) => {
-    setActiveId((prev) => (prev === id ? "idle" : id));
+    const next = activeId === id ? "idle" : id;
+    setActiveId(next);
+    // On mobile, scroll to the car model when selecting a category
+    if (next !== "idle" && canvasRef.current && window.innerWidth <= 640) {
+      setTimeout(() => {
+        canvasRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
+    }
   };
 
   useEffect(() => {
@@ -184,6 +192,7 @@ export default function Products() {
 
         {/* canvas host */}
         <div
+          ref={canvasRef}
           className="relative overflow-hidden"
           style={{
             background:

@@ -47,32 +47,6 @@ export default function Hero() {
         }}
       >
         <div className="corner tl" />
-        <div
-          style={{
-            fontFamily: "var(--font-mono),monospace",
-            fontSize: 12,
-            letterSpacing: "0.15em",
-            color: "var(--muted)",
-          }}
-        >
-          etex // sys.boot — v1971.2026
-          <br />
-          <span style={{ textTransform: "uppercase" }}>LOCATION ▸ NICOSIA · CYPRUS</span>
-        </div>
-        <div
-          style={{
-            fontFamily: "var(--font-mono),monospace",
-            fontSize: 12,
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            color: "var(--muted)",
-            textAlign: "right",
-          }}
-        >
-          CARGO ▸ 30 LINES · 23 SUPPLIERS
-          <br />
-          STATUS ▸ <span className="neon-text">ONLINE</span>
-        </div>
         <div className="corner tr" />
       </div>
 
