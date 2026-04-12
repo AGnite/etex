@@ -81,7 +81,7 @@ export default function Legacy() {
       >
         {/* chairman image fills the plate */}
         <Image
-          src="/images/chairman-portrait.jpg"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/chairman-portrait.jpg`}
           alt="Andreas Theocharous"
           fill
           sizes="(max-width: 1024px) 90vw, 40vw"

@@ -1,5 +1,7 @@
 import type { Vector3Tuple } from "three";
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 /**
  * Component kinds — each one renders as a composite assembly of Three.js
  * primitives designed to read as an actual car part. JSX for each kind
@@ -88,13 +90,13 @@ export const PART_CATEGORIES: PartCategory[] = [
       { position: [0.3, 0.88, 0.7], kind: "piston" },
     ],
     products: [
-      { src: "/images/products/pistons-and-liners.jpg", label: "Pistons & Liners" },
-      { src: "/images/products/piston-rings.jpg", label: "Piston Rings" },
-      { src: "/images/products/engine-bearings.jpg", label: "Engine Bearings" },
-      { src: "/images/products/valves-and-guides.jpg", label: "Valves & Guides" },
-      { src: "/images/products/gaskets.jpg", label: "Gaskets" },
-      { src: "/images/products/belts.jpg", label: "Belts" },
-      { src: "/images/products/tensioners.jpg", label: "Tensioners" },
+      { src: `${BASE}/images/products/pistons-and-liners.jpg`, label: "Pistons & Liners" },
+      { src: `${BASE}/images/products/piston-rings.jpg`, label: "Piston Rings" },
+      { src: `${BASE}/images/products/engine-bearings.jpg`, label: "Engine Bearings" },
+      { src: `${BASE}/images/products/valves-and-guides.jpg`, label: "Valves & Guides" },
+      { src: `${BASE}/images/products/gaskets.jpg`, label: "Gaskets" },
+      { src: `${BASE}/images/products/belts.jpg`, label: "Belts" },
+      { src: `${BASE}/images/products/tensioners.jpg`, label: "Tensioners" },
     ],
   },
   {
@@ -116,11 +118,11 @@ export const PART_CATEGORIES: PartCategory[] = [
       { position: [-0.35, 0.8, -0.35], rotation: [0.35, 0, 0], kind: "steeringWheel" },
     ],
     products: [
-      { src: "/images/products/shock-absorbers.jpg", label: "Shock Absorbers" },
-      { src: "/images/products/arms-ends-rods-joints.jpg", label: "Arms · Ends · Rods · Joints" },
-      { src: "/images/products/cv-joints.jpg", label: "CV Joints" },
-      { src: "/images/products/Steering-Drive-Shaft-Boots.jpg", label: "Drive Shaft Boots" },
-      { src: "/images/products/wheel-bearings.jpg", label: "Wheel Bearings" },
+      { src: `${BASE}/images/products/shock-absorbers.jpg`, label: "Shock Absorbers" },
+      { src: `${BASE}/images/products/arms-ends-rods-joints.jpg`, label: "Arms · Ends · Rods · Joints" },
+      { src: `${BASE}/images/products/cv-joints.jpg`, label: "CV Joints" },
+      { src: `${BASE}/images/products/Steering-Drive-Shaft-Boots.jpg`, label: "Drive Shaft Boots" },
+      { src: `${BASE}/images/products/wheel-bearings.jpg`, label: "Wheel Bearings" },
     ],
   },
   {
@@ -140,11 +142,11 @@ export const PART_CATEGORIES: PartCategory[] = [
       { position: [-0.82, 0.36, 1.50], kind: "brakeDisc" },
     ],
     products: [
-      { src: "/images/products/brake-pads.jpg", label: "Brake Pads" },
-      { src: "/images/products/brake-discs.jpg", label: "Brake Discs" },
-      { src: "/images/products/brake-shoes.jpg", label: "Brake Shoes" },
-      { src: "/images/products/brake-pumps.jpg", label: "Brake Pumps" },
-      { src: "/images/products/brake-fluids.jpg", label: "Brake Fluids" },
+      { src: `${BASE}/images/products/brake-pads.jpg`, label: "Brake Pads" },
+      { src: `${BASE}/images/products/brake-discs.jpg`, label: "Brake Discs" },
+      { src: `${BASE}/images/products/brake-shoes.jpg`, label: "Brake Shoes" },
+      { src: `${BASE}/images/products/brake-pumps.jpg`, label: "Brake Pumps" },
+      { src: `${BASE}/images/products/brake-fluids.jpg`, label: "Brake Fluids" },
     ],
   },
   {
@@ -165,10 +167,10 @@ export const PART_CATEGORIES: PartCategory[] = [
       { position: [0, 0.4, 1.1], rotation: [0, Math.PI / 2, 0], kind: "clutchDisc" },
     ],
     products: [
-      { src: "/images/products/clutches.jpg", label: "Clutches" },
-      { src: "/images/products/clutch-bearings.jpg", label: "Clutch Bearings" },
-      { src: "/images/products/transmission-fluid.jpg", label: "Transmission Fluid" },
-      { src: "/images/products/universal-joints.jpg", label: "Universal Joints" },
+      { src: `${BASE}/images/products/clutches.jpg`, label: "Clutches" },
+      { src: `${BASE}/images/products/clutch-bearings.jpg`, label: "Clutch Bearings" },
+      { src: `${BASE}/images/products/transmission-fluid.jpg`, label: "Transmission Fluid" },
+      { src: `${BASE}/images/products/universal-joints.jpg`, label: "Universal Joints" },
     ],
   },
   {
@@ -190,12 +192,12 @@ export const PART_CATEGORIES: PartCategory[] = [
       { position: [0.55, 0.75, 0.85], kind: "airFilter" },
     ],
     products: [
-      { src: "/images/products/filters.jpg", label: "Filters" },
-      { src: "/images/products/coolant-antifreeze.jpg", label: "Coolant · Antifreeze" },
-      { src: "/images/products/water-pumps.jpg", label: "Water Pumps" },
-      { src: "/images/products/thermostats.jpg", label: "Thermostats" },
-      { src: "/images/products/hoses.jpg", label: "Hoses" },
-      { src: "/images/products/radiators.jpg", label: "Radiators" },
+      { src: `${BASE}/images/products/filters.jpg`, label: "Filters" },
+      { src: `${BASE}/images/products/coolant-antifreeze.jpg`, label: "Coolant · Antifreeze" },
+      { src: `${BASE}/images/products/water-pumps.jpg`, label: "Water Pumps" },
+      { src: `${BASE}/images/products/thermostats.jpg`, label: "Thermostats" },
+      { src: `${BASE}/images/products/hoses.jpg`, label: "Hoses" },
+      { src: `${BASE}/images/products/radiators.jpg`, label: "Radiators" },
     ],
   },
   {
@@ -217,12 +219,12 @@ export const PART_CATEGORIES: PartCategory[] = [
       { position: [0, 0.95, 0.55], rotation: [0, Math.PI / 2, 0], kind: "belt" },
     ],
     products: [
-      { src: "/images/products/engine-mounts.jpg", label: "Engine Mounts" },
-      { src: "/images/products/bushes.jpg", label: "Bushes" },
-      { src: "/images/products/boots.jpg", label: "Boots" },
-      { src: "/images/products/oil-seals.jpg", label: "Oil Seals" },
-      { src: "/images/products/hoses.jpg", label: "Hoses" },
-      { src: "/images/products/gas-springs.jpg", label: "Gas Springs" },
+      { src: `${BASE}/images/products/engine-mounts.jpg`, label: "Engine Mounts" },
+      { src: `${BASE}/images/products/bushes.jpg`, label: "Bushes" },
+      { src: `${BASE}/images/products/boots.jpg`, label: "Boots" },
+      { src: `${BASE}/images/products/oil-seals.jpg`, label: "Oil Seals" },
+      { src: `${BASE}/images/products/hoses.jpg`, label: "Hoses" },
+      { src: `${BASE}/images/products/gas-springs.jpg`, label: "Gas Springs" },
     ],
   },
   {
@@ -249,14 +251,14 @@ export const PART_CATEGORIES: PartCategory[] = [
       { position: [-0.7, 0.55, -1.8], kind: "headlight" },
     ],
     products: [
-      { src: "/images/products/spark-plugs.jpg", label: "Spark Plugs" },
-      { src: "/images/products/glow-plugs.jpg", label: "Glow Plugs" },
-      { src: "/images/products/ignition-cable.jpg", label: "Ignition Cable" },
-      { src: "/images/products/fuel-pumps.jpg", label: "Fuel Pumps" },
-      { src: "/images/products/car-battery.jpg", label: "Car Battery" },
-      { src: "/images/products/engine-control-sensors.jpg", label: "Engine Control Sensors" },
-      { src: "/images/products/oxygen-sensors.jpg", label: "Oxygen Sensors" },
-      { src: "/images/products/ignition-coil.jpg", label: "Ignition Coil" },
+      { src: `${BASE}/images/products/spark-plugs.jpg`, label: "Spark Plugs" },
+      { src: `${BASE}/images/products/glow-plugs.jpg`, label: "Glow Plugs" },
+      { src: `${BASE}/images/products/ignition-cable.jpg`, label: "Ignition Cable" },
+      { src: `${BASE}/images/products/fuel-pumps.jpg`, label: "Fuel Pumps" },
+      { src: `${BASE}/images/products/car-battery.jpg`, label: "Car Battery" },
+      { src: `${BASE}/images/products/engine-control-sensors.jpg`, label: "Engine Control Sensors" },
+      { src: `${BASE}/images/products/oxygen-sensors.jpg`, label: "Oxygen Sensors" },
+      { src: `${BASE}/images/products/ignition-coil.jpg`, label: "Ignition Coil" },
     ],
   },
   {
@@ -277,11 +279,11 @@ export const PART_CATEGORIES: PartCategory[] = [
       { position: [0.5, 0.85, 0.3], kind: "fluidReservoir" },
     ],
     products: [
-      { src: "/images/products/engine-oil.jpg", label: "Engine Oil" },
-      { src: "/images/products/transmission-fluid.jpg", label: "Transmission Fluid" },
-      { src: "/images/products/grease.jpg", label: "Grease" },
-      { src: "/images/products/coolant-antifreeze.jpg", label: "Coolant · Antifreeze" },
-      { src: "/images/products/brake-fluids.jpg", label: "Brake Fluids" },
+      { src: `${BASE}/images/products/engine-oil.jpg`, label: "Engine Oil" },
+      { src: `${BASE}/images/products/transmission-fluid.jpg`, label: "Transmission Fluid" },
+      { src: `${BASE}/images/products/grease.jpg`, label: "Grease" },
+      { src: `${BASE}/images/products/coolant-antifreeze.jpg`, label: "Coolant · Antifreeze" },
+      { src: `${BASE}/images/products/brake-fluids.jpg`, label: "Brake Fluids" },
     ],
   },
   {
@@ -305,10 +307,10 @@ export const PART_CATEGORIES: PartCategory[] = [
       { position: [0, 1.25, 1.9], kind: "racingWing" },
     ],
     products: [
-      { src: "/images/products/racing-brake-pads.jpg", label: "Racing Brake Pads" },
-      { src: "/images/products/racing-brake-discs.jpg", label: "Racing Brake Discs" },
-      { src: "/images/products/racing-engine-oil.jpg", label: "Racing Engine Oil" },
-      { src: "/images/products/racing-clutches.jpg", label: "Racing Clutches" },
+      { src: `${BASE}/images/products/racing-brake-pads.jpg`, label: "Racing Brake Pads" },
+      { src: `${BASE}/images/products/racing-brake-discs.jpg`, label: "Racing Brake Discs" },
+      { src: `${BASE}/images/products/racing-engine-oil.jpg`, label: "Racing Engine Oil" },
+      { src: `${BASE}/images/products/racing-clutches.jpg`, label: "Racing Clutches" },
     ],
   },
 ];
